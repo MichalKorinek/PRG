@@ -16,25 +16,25 @@
 [<a href="/">Hlavní stránka</a>]<br>
 <h1>Nákup</h1>
 <table border="solid">
-<c:forEach var="i" items="${inzeraty}">
-    <tr>
-        <td>ID inzerátu: ${i.id}</td>
-        <td align="right">Cena:
-            <fmt:formatNumber pattern="#,##0.00 Kč" value="${i.cena}"/>
-        </td>
-        <td align="center">
-                ${i.kategorie}
-        </td>
-        <td align="right">
-                ${i.text }
-        </td>
-        <td>
-            <input type="submit" value="Koupit">
-        </td>
-    </tr>
+    <c:forEach var="i" items="${inzeraty}">
+        <tr>
+            <td>ID inzerátu: ${i.id}</td>
+            <td align="right">Cena:
+                <fmt:formatNumber pattern="#,##0.00 Kč" value="${i.cena}"/>
+            </td>
+            <td align="center">
+                    ${i.kategorie}
+            </td>
+            <td align="right">
+                    ${i.text }
+            </td>
+            <td>
+                <input type="submit" value="Koupit">
+            </td>
+        </tr>
 
 
-</c:forEach>
+    </c:forEach>
 </table>
 </body>
 </html>

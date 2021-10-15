@@ -14,7 +14,7 @@ import java.util.List;
 
 @SpringBootApplication
 @ComponentScan({"cz.uhk.ppro.inzeraty.controller"})
-public class InzeratyApplication implements WebMvcConfigurer{
+public class InzeratyApplication implements WebMvcConfigurer {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(InzeratyApplication.class, args);
         MyController controller = (MyController) ctx.getBean("myController");
@@ -31,13 +31,11 @@ public class InzeratyApplication implements WebMvcConfigurer{
         i2.setCena(new BigDecimal(400));
         i2.setKategorie("Vozidla");
         controller.pridejInzerat(i2);
-        for (Inzerat inzerat : inzeraty){
+        for (Inzerat inzerat : inzeraty) {
             System.out.println(inzerat.getText());
         }
 
     }
-
-
 
 
 }
