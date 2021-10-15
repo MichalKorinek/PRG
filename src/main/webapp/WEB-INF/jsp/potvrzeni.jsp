@@ -2,19 +2,15 @@
   Created by IntelliJ IDEA.
   User: Michal
   Date: 15.10.2021
-  Time: 11:39
+  Time: 21:38
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
-<h1>Hlavní Stránka - Inzeráty</h1>
-[<a href="nakup">Nákup</a>]
-[<a href="prodej">Prodej</a>]
-[<a href="vymena">Výměna</a>]
+<a href="/"> ------> Úspěšně uloženo - klikněte pro vrácení na hlavní stránku <-----</a>
 </body>
 </html>

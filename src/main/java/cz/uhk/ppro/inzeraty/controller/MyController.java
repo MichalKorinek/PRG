@@ -7,11 +7,10 @@ import cz.uhk.ppro.inzeraty.sluzby.PametoveUlozisteInzeratu;
 import cz.uhk.ppro.inzeraty.sluzby.UlozisteInzeratu;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -52,6 +51,20 @@ public class MyController {
     @RequestMapping(value = "/prodej", method = RequestMethod.GET)
     public String prodej(){
         return "prodej";
+    }
+
+    @RequestMapping(value = "/prodej", method = RequestMethod.POST)
+    public String vytvorProdej(
+            @RequestParam String text,
+            @RequestParam int cena,
+            @RequestParam String kategorie
+            ){
+        Inzerat i = new Inzerat();
+        i.setText(text);
+        i.setCena(new BigDecimal(cena));
+        i.setKategorie(kategorie);
+        ulozisteInzeratu.pridej(i);
+        return "potvrzeni";
     }
 
 }
