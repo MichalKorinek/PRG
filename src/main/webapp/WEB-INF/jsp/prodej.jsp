@@ -16,10 +16,10 @@
 <form action="prodej" method="post">
     <label>Kategorie</label>
     <select name="kategorie">
-        <option value="1">Zahrada</option>
-        <option value="2">Elektronika</option>
-        <option value="3">Domácnost</option>
-        <option value="4">Vozidla</option>
+        <option value="Zahrada">Zahrada</option>
+        <option value="Elektronika">Elektronika</option>
+        <option value="Domácnost">Domácnost</option>
+        <option value="Vozidla">Vozidla</option>
     </select><br><br>
     <label for="text">Popis</label>
     <input type="text" id="text" name="text"><br><br>

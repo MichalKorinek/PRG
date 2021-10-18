@@ -69,4 +69,11 @@ public class MyController {
         return "potvrzeni";
     }
 
+    @RequestMapping(value = "/nakup", method = RequestMethod.POST)
+    public String zakoupit(
+            @RequestParam int idInzerat){
+        ulozisteInzeratu.odstran(idInzerat);
+        return "redirect:/nakup";
+    }
+
 }

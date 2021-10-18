@@ -18,19 +18,23 @@
 <table border="solid">
     <c:forEach var="i" items="${inzeraty}">
         <tr>
-            <td>ID inzerátu: ${i.id}</td>
-            <td align="right">Cena:
-                <fmt:formatNumber pattern="#,##0.00 Kč" value="${i.cena}"/>
-            </td>
-            <td align="center">
-                    ${i.kategorie}
-            </td>
-            <td align="right">
-                    ${i.text }
-            </td>
-            <td>
-                <input type="submit" value="Koupit">
-            </td>
+            <form action="nakup" method="post">
+                <td>ID inzerátu: <input type="number" id="idInzerat" name="idInzerat" value="${i.id}" readonly></td>
+                <td align="right">Cena:
+                    <fmt:formatNumber pattern="#,##0.00 Kč" value="${i.cena}"/>
+                </td>
+                <td align="center">
+                        ${i.kategorie}
+                </td>
+                <td align="right">
+                        ${i.text }
+                </td>
+                <td>
+
+                    <input type="submit" value="Koupit">
+
+                </td>
+            </form>
         </tr>
 
 
